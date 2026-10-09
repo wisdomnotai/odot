@@ -7,8 +7,8 @@ a{color:inherit;text-decoration:none}
 :focus-visible{outline:3px solid var(--coral);outline-offset:3px}
 img{max-width:100%;display:block}
 svg{stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.hero{min-height:clamp(440px,58vh,540px);border-radius:var(--r);padding:16px;color:#fff;display:flex;flex-direction:column;justify-content:space-between;background:radial-gradient(120% 70% at 75% 15%,#ffb347 0,#ff6a3d 38%,#b3261e 70%,#4a0f10 100%)}
-.hero-art{width:min(100%, 420px);margin:20px auto 0;filter:drop-shadow(0 24px 40px rgba(25, 8, 6, .18))}
+.hero{min-height:clamp(420px,56vh,560px);max-height:100vh;border-radius:var(--r);padding:16px;color:#fff;display:flex;flex-direction:column;justify-content:space-between;background:radial-gradient(120% 70% at 75% 15%,#ffb347 0,#ff6a3d 38%,#b3261e 70%,#4a0f10 100%)}
+.hero-art{width:min(82vw, 380px);max-height:42vh;height:auto;object-fit:contain;margin:16px auto 0;filter:drop-shadow(0 24px 40px rgba(25, 8, 6, .18))}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:10px}
 .logo{display:inline-flex;align-items:center;gap:6px;font-weight:800;font-size:18px}
 .nav-links{display:none;gap:22px;font-size:14px}
@@ -81,5 +81,5 @@ footer{background:#000;color:#fff;border-radius:var(--r);padding:30px 24px;displ
 footer p{font-size:12px;color:#999}
 .js .reveal{opacity:0;transform:translateY(14px);transition:.6s}
 .js .reveal.in{opacity:1;transform:none}
-@media(min-width:768px){body{max-width:960px}.nav-links{display:flex}.three{grid-template-columns:repeat(3,1fr)}.mini{grid-template-columns:1fr;gap:12px}.ph{aspect-ratio:4/3}.stack{grid-template-columns:1fr 1fr}.hero{min-height:88vh;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(280px,480px);align-items:center;column-gap:30px}.hero-copy{padding:20px 0 20px 8px}.hero-art{margin:0;justify-self:end;max-width:440px}.project-showcase{padding-top:8px}}
+@media(min-width:768px){body{max-width:960px}.nav-links{display:flex}.three{grid-template-columns:repeat(3,1fr)}.mini{grid-template-columns:1fr;gap:12px}.ph{aspect-ratio:4/3}.stack{grid-template-columns:1fr 1fr}.hero{min-height:88vh;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(280px,480px);align-items:center;column-gap:30px}.hero-copy{padding:20px 0 20px 8px}.hero-art{margin:0;justify-self:end;max-width:440px;width:min(100%, 440px);max-height:none}.project-showcase{padding-top:8px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
