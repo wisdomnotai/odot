@@ -24,7 +24,8 @@ body.app { max-width: 1000px; }
 
 /* ===== Todos ===== */
 .main__head { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 16px; }
-.main__head h1 { font-size: clamp(24px, 6vw, 34px); letter-spacing: -0.02em; }
+.main__head h1 { flex: 1; font-size: clamp(24px, 6vw, 34px); letter-spacing: -0.02em; }
+#add-todo { margin-left: auto; }
 .todos { list-style: none; padding: 0; display: grid; gap: 10px; }
 .empty { text-align: center; color: var(--muted); padding: 30px 10px; }
 .todo { display: flex; gap: 12px; align-items: flex-start; background: #fff; border-radius: 16px; padding: 14px; border-left: 6px solid #d9c9bb; }
