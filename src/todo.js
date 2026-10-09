@@ -1,13 +1,23 @@
-export class Todo{
-    constructor(title, description, dueDate, isPriority = false, isCompleted){
-        this.id = crypto.randomUUID();
+// A single todo item.
+export class Todo {
+    constructor(title, description = "", dueDate = "", isPriority = false, isCompleted = false, id = crypto.randomUUID()) {
+        this.id = id;                 // id is passed in when loading from localStorage
+        this.title = title;
+        this.description = description;
+        this.dueDate = dueDate;       // "YYYY-MM-DD" string from the date input
+        this.isPriority = isPriority;
+        this.isCompleted = isCompleted;
+    }
+
+    toggleCompleted() {
+        this.isCompleted = !this.isCompleted;
+    }
+
+    // Used by the edit form
+    update({ title, description, dueDate, isPriority }) {
         this.title = title;
         this.description = description;
         this.dueDate = dueDate;
-        this.isPriority = false;
-        this.isCompleted = false;
+        this.isPriority = isPriority;
     }
-        toggleCompleted(){
-            this.isCompleted = !this.isCompleted;
-        }
-    }
+}

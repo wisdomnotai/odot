@@ -1,5 +1,5 @@
+// Holds every project and knows which one is selected. No DOM code in here.
 import { Project } from "./project.js";
-import { Todo } from "./todo.js";
 
 export class TodoManager {
     constructor() {
@@ -19,15 +19,16 @@ export class TodoManager {
     setCurrentProject(projectID) {
         const project = this.projects.find(project => project.id === projectID);
         if (!project) {
-            return;
+            return null;
         }
         this.currentProject = project;
+        return project;
     }
 
     deleteProject(projectID) {
         const defaultProject = this.projects[0];
         if (projectID === defaultProject.id) {
-            return;
+            return; // the default project can't be deleted
         }
         this.projects = this.projects.filter(project => project.id !== projectID);
         if (this.currentProject.id === projectID) {

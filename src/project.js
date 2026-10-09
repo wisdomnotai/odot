@@ -1,14 +1,16 @@
-import { Todo } from "./todo.js";
-
 export class Project {
-    constructor(title) {
-        this.id = crypto.randomUUID();
+    constructor(title, id = crypto.randomUUID()) {
+        this.id = id;                 // id is passed in when loading from localStorage
         this.title = title;
         this.todos = [];
     }
 
     addTodo(todo) {
         this.todos.push(todo);
+    }
+
+    getTodo(todoId) {
+        return this.todos.find(todo => todo.id === todoId);
     }
 
     removeTodo(todoId) {
