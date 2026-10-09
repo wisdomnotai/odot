@@ -1,0 +1,5 @@
+.footer { background: #000; color: #fff; border-radius: var(--radius); padding: 30px 24px; display: grid; gap: 22px; }
+.footer__icons { display: flex; gap: 12px; }
+.footer__icons a { width: 42px; height: 42px; border: 1px solid #444; border-radius: 50%; display: grid; place-items: center; }
+.footer__icons svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.footer p { font-size: 12px; color: #999; }

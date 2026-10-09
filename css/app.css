@@ -1,0 +1,58 @@
+/* Styles for app.html only. Colors and buttons come from base.css. */
+body.app { max-width: 1000px; }
+
+/* ===== Top bar ===== */
+.topbar { display: flex; justify-content: space-between; align-items: center; padding: 10px 6px 18px; }
+.back { font-size: 14px; color: var(--muted); }
+
+/* ===== Layout: stacked on phones, two columns on desktop ===== */
+.layout { display: grid; gap: 14px; }
+.sidebar, .main { background: var(--card); border-radius: var(--radius); padding: 20px; }
+.sidebar h2 { font-size: 20px; margin-bottom: 12px; }
+
+/* ===== Projects ===== */
+.projects { list-style: none; padding: 0; display: grid; gap: 6px; margin-bottom: 14px; }
+.project { display: flex; align-items: center; gap: 6px; background: #fff; border-radius: 14px; padding: 4px 8px 4px 4px; }
+.project.is-active { outline: 2px solid var(--coral); }
+.project__name { flex: 1; text-align: left; background: none; border: 0; padding: 10px; font: inherit; cursor: pointer; color: var(--ink); }
+.project__count { font-size: 12px; color: var(--muted); }
+.icon-btn { border: 0; background: none; font-size: 20px; cursor: pointer; color: var(--muted); padding: 0 6px; }
+.icon-btn:hover { color: var(--rose); }
+.project-form { display: flex; gap: 8px; }
+.project-form input { flex: 1; min-width: 0; }
+.project-form .btn { padding: 10px 18px; }
+
+/* ===== Todos ===== */
+.main__head { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 16px; }
+.main__head h1 { font-size: clamp(24px, 6vw, 34px); letter-spacing: -0.02em; }
+.todos { list-style: none; padding: 0; display: grid; gap: 10px; }
+.empty { text-align: center; color: var(--muted); padding: 30px 10px; }
+.todo { display: flex; gap: 12px; align-items: flex-start; background: #fff; border-radius: 16px; padding: 14px; border-left: 6px solid #d9c9bb; }
+.todo.is-priority { border-left-color: var(--rose); }
+.todo.is-done { opacity: 0.55; }
+.todo.is-done .todo__title { text-decoration: line-through; }
+.todo__check { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--coral); cursor: pointer; }
+.todo__details { flex: 1; min-width: 0; }
+.todo__summary { display: flex; justify-content: space-between; gap: 10px; cursor: pointer; list-style: none; }
+.todo__title { font-weight: 500; overflow-wrap: anywhere; }
+.todo__due { font-size: 13px; color: var(--muted); white-space: nowrap; }
+.todo__body { margin-top: 10px; font-size: 14px; color: var(--muted); }
+.todo__actions { display: flex; gap: 14px; margin-top: 10px; }
+.link { background: none; border: 0; padding: 0; font: inherit; font-weight: 500; color: var(--coral); cursor: pointer; }
+.link--danger { color: var(--rose); }
+
+/* ===== Inputs and dialog ===== */
+input:not([type="checkbox"]), textarea { font: inherit; padding: 10px 12px; border: 1px solid #e0d3c5; border-radius: 12px; background: #fff; width: 100%; }
+dialog { border: 0; border-radius: var(--radius); padding: 24px; width: min(92vw, 440px); background: var(--bg); color: var(--ink); }
+dialog::backdrop { background: rgba(29, 22, 18, 0.5); }
+.dialog-form { display: grid; gap: 14px; }
+.dialog-form label { display: grid; gap: 6px; font-size: 14px; font-weight: 500; }
+.check-row { display: flex !important; align-items: center; gap: 8px; }
+.dialog-actions { display: flex; justify-content: flex-end; gap: 10px; }
+.dialog-actions .btn { border: 1px solid #e0d3c5; cursor: pointer; }
+.dialog-actions .btn--dark { border-color: var(--ink); }
+.btn { cursor: pointer; border: 0; font-size: 15px; }
+
+@media (min-width: 768px) {
+  .layout { grid-template-columns: 280px 1fr; align-items: start; }
+}

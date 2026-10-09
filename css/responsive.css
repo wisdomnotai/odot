@@ -1,0 +1,16 @@
+/* Mobile is the default. Everything below only adds to it for bigger screens. */
+@media (min-width: 768px) {
+  body { max-width: 960px; }
+  .nav__links { display: flex; }
+  .hero { min-height: 88vh; }
+  .hero__art { right: 2%; width: 48%; }
+  .steps { grid-template-columns: repeat(3, 1fr); }
+  .step { grid-template-columns: 1fr; }
+  .step img { grid-row: auto; width: 90px; }
+  .cards { grid-template-columns: 1fr 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}

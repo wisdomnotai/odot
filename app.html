@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Doable: your todos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script type="module" src="src/app.js"></script>
+</head>
+<body class="app">
+  <header class="topbar">
+    <a class="logo" href="index.html">doable</a>
+    <a class="back" href="index.html">Back to home</a>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Projects</h2>
+      <ul id="project-list" class="projects"></ul>
+      <form id="project-form" class="project-form">
+        <input name="title" placeholder="New project name" required maxlength="40" aria-label="New project name">
+        <button class="btn btn--dark" type="submit">Add</button>
+      </form>
+    </aside>
+
+    <main class="main">
+      <div class="main__head">
+        <h1 id="project-title"></h1>
+        <button id="add-todo" class="btn btn--dark" type="button">New todo</button>
+      </div>
+      <ul id="todo-list" class="todos"></ul>
+    </main>
+  </div>
+
+  <dialog id="todo-dialog">
+    <form id="todo-form" class="dialog-form">
+      <h2 id="dialog-title">New todo</h2>
+      <label>Title <input name="title" required maxlength="80"></label>
+      <label>Description <textarea name="description" rows="3"></textarea></label>
+      <label>Due date <input type="date" name="dueDate"></label>
+      <label class="check-row"><input type="checkbox" name="isPriority"> High priority</label>
+      <div class="dialog-actions">
+        <button type="button" id="cancel-todo" class="btn">Cancel</button>
+        <button type="submit" class="btn btn--dark">Save todo</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>

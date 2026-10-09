@@ -1,0 +1,51 @@
+/* ===== Design tokens ===== */
+:root {
+  --bg: #fbf6ee;
+  --card: #f3eadf;
+  --ink: #1d1612;
+  --muted: #7a6d62;
+  --coral: #ff5a36;
+  --amber: #ff9f43;
+  --rose: #e83e5a;
+  --radius: 28px;
+}
+
+/* ===== Reset ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; }
+img, svg { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
+
+/* ===== Page ===== */
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 16px/1.55 Inter, system-ui, sans-serif;
+  padding: 10px;
+  max-width: 520px; /* phone-sized column; widened in responsive.css */
+  margin: 0 auto;
+}
+h1, h2, h3, .logo, .btn { font-family: "Bricolage Grotesque", sans-serif; }
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  background: #fff;
+  color: var(--ink);
+  padding: 14px 26px;
+  border-radius: 99px;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn--dark  { background: var(--ink); color: #fff; }
+.btn--light { background: #fff; color: var(--coral); }
+
+/* ===== Small shared pieces ===== */
+.tag { display: inline-flex; align-items: center; gap: 8px; background: #fff; border-radius: 99px; padding: 6px 14px; font-size: 13px; font-weight: 500; }
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.dot--amber { background: var(--amber); }
+.dot--rose  { background: var(--rose); }
+.dot--coral { background: var(--coral); }
