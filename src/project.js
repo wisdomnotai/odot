@@ -1,9 +1,9 @@
 import { Todo } from "./todo.js";
 export class Project{
     constructor(title){
-        this.id = crypto.randomUUID;
+        this.id = crypto.randomUUID();
         this.title = title;
-        this.Todo = [];
+        this.todo = [];
     }
     addTodo(todo){
         this.todo.push(todo);
