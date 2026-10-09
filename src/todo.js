@@ -1,6 +1,13 @@
+const createId = () => {
+    if (globalThis.crypto && typeof globalThis.crypto.randomUUID === "function") {
+        return globalThis.crypto.randomUUID();
+    }
+    return `todo-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+};
+
 // A single todo item.
 export class Todo {
-    constructor(title, description = "", dueDate = "", isPriority = false, isCompleted = false, id = crypto.randomUUID()) {
+    constructor(title, description = "", dueDate = "", isPriority = false, isCompleted = false, id = createId()) {
         this.id = id;                 // id is passed in when loading from localStorage
         this.title = title;
         this.description = description;
