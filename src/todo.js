@@ -1,5 +1,5 @@
 export class Todo{
-    constructor(id, title, description, dueDate, isPriority = false, isCompleted){
+    constructor(title, description, dueDate, isPriority = false, isCompleted){
         this.id = crypto.randomUUID();
         this.title = title;
         this.description = description;

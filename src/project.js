@@ -1,8 +1,14 @@
 import { Todo } from "./todo.js";
-export class Todo{
-    constructor(id,title, Todo){
+export class Project{
+    constructor(title){
         this.id = crypto.randomUUID;
         this.title = title;
-        this.Todo = Todo;
+        this.Todo = [];
+    }
+    addTodo(todo){
+        this.todo.push(todo);
+    }
+    removeTodo(todoId){
+        this.todos.filter(todo => todo.id !== todo.Id);
     }
 }
