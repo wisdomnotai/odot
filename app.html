@@ -30,7 +30,7 @@
     <main class="main">
       <div class="main__head">
         <h1 id="project-title"></h1>
-        <button id="add-todo" class="btn btn--dark" type="button">New todo</button>
+        <button id="add-todo" class="btn btn--dark" type="button">Add task</button>
       </div>
       <ul id="todo-list" class="todos"></ul>
     </main>
@@ -38,14 +38,14 @@
 
   <dialog id="todo-dialog">
     <form id="todo-form" class="dialog-form">
-      <h2 id="dialog-title">New todo</h2>
+      <h2 id="dialog-title">Add task</h2>
       <label>Title <input name="title" required maxlength="80"></label>
       <label>Description <textarea name="description" rows="3"></textarea></label>
       <label>Due date <input type="date" name="dueDate"></label>
       <label class="check-row"><input type="checkbox" name="isPriority"> High priority</label>
       <div class="dialog-actions">
         <button type="button" id="cancel-todo" class="btn">Cancel</button>
-        <button type="submit" class="btn btn--dark">Save todo</button>
+        <button type="submit" class="btn btn--dark">Save task</button>
       </div>
     </form>
   </dialog>

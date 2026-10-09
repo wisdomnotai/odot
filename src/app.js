@@ -28,7 +28,7 @@ projectForm.addEventListener("submit", (event) => {
 function openDialog(todo = null) {
     editingId = todo ? todo.id : null;
     todoForm.reset();
-    document.querySelector("#dialog-title").textContent = todo ? "Edit todo" : "New todo";
+    document.querySelector("#dialog-title").textContent = todo ? "Edit task" : "Add task";
     if (todo) {
         todoForm.elements.title.value = todo.title;
         todoForm.elements.description.value = todo.description;
